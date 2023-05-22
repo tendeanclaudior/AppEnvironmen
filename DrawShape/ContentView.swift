@@ -10,12 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+            Image("g4")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 400, height: 100)
+                .clipShape(Ellipse().rotation(Angle(degrees: 30)))
+                .overlay(Ellipse().rotation(Angle(degrees: 30)).stroke(Color.green, lineWidth: 10))
+                
+        }.padding()
     }
 }
 
